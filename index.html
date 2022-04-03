@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let number = +prompt('Введите число', '');
+        let gapCounter = number;
+        let starCounter = 1;
+        let furtree = '';
+        for (let furtreeIndex = 1; furtreeIndex <= number; furtreeIndex++) {
+            let gap = '';
+
+            for (let gapIndex = 2; gapIndex <= gapCounter; gapIndex++) {
+                gap += ' ';
+            }
+
+            let star = '';
+
+            for (let starIndex = 1; starIndex <= starCounter; starIndex++) {
+                star += '*';
+            }
+
+            gapCounter--;
+            starCounter += 2;
+            furtree += `${gap}${star}\n`;
+        }
+
+        alert(furtree);
+
+    </script>
+
+</body>
+
+</html>
